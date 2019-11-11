@@ -27,7 +27,7 @@ html {
   display: none;
 }
 
-.dino img{
+img {
   display: block;
   width: 100%;
 }
@@ -59,6 +59,7 @@ html {
   .dino {
     flex-basis: 33%;
   }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -70,4 +71,5 @@ html {
   .dino {
     flex-basis: 25%;
   }
+
 }
