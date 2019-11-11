@@ -1,0 +1,73 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.dino-wrap {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  flex-basis: content;
+}
+
+.dino:nth-child(even) {
+  display: none;
+}
+
+.dino img{
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (min-width: 25em) {
+
+  .dino {
+    display: inline-block;
+    flex-basis: 50%;
+  }
+
+  .dino:nth-child(even) {
+    display: inline-block;
+  }
+
+  .dino-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media only screen and (min-width: 38em) {
+
+  .dino:first-child {
+    display: none;
+  }
+
+  .dino {
+    flex-basis: 33%;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+
+  .dino:first-child {
+    display: inline-block;
+  }
+
+  .dino {
+    flex-basis: 25%;
+  }
+}
